@@ -1,0 +1,24 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #fff; color: #555; display: flex; flex-direction: column; align-items: center; padding: 1rem; }
+header { text-align: center; margin-bottom: 1rem; }
+.tabs { display: flex; justify-content: center; margin-bottom: 1rem; }
+.tab { background: #eee; border: none; padding: 0.5rem 1rem; cursor: pointer; }
+.tab.active { background: #E60000; color: #fff; }
+.panels { width: 100%; max-width: 500px; }
+.panel { display: none; background: #fafafa; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.panel.active { display: block; }
+form { display: flex; flex-direction: column; gap: 0.5rem; }
+label { display: flex; flex-direction: column; }
+input { padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
+button { background: #E60000; color: #fff; border: none; padding: 0.5rem; cursor: pointer; border-radius: 4px; }
+button:hover { background: #c00; }
+.pw-wrapper { position: relative; }
+.pw-wrapper .toggle { position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); cursor: pointer; }
+.showing-password .toggle { text-decoration: line-through; }
+#pw-rules { list-style: none; font-size: 0.9rem; }
+#pw-rules li.valid { color: green; }
+@media (max-width: 600px) {
+  body { padding: 0.5rem; }
+  .tabs { flex-direction: column; }
+  .tab { margin-bottom: 0.5rem; }
+}
