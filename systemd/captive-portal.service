@@ -1,0 +1,13 @@
+[Unit]
+Description=Captive Portal Node.js Service
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/pfad/zu/captive-portal
+ExecStart=/usr/bin/pm2 start server.js --name captive-portal --no-daemon
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
